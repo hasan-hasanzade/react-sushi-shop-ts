@@ -1,3 +1,1 @@
-# Getting Started with Create React App
-
-Sushiera
+# Sushiera - Sushi bar app
