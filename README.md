@@ -1,1 +1,1 @@
-# Sushiera - Sushi bar app
+# 🍣Sushiera - Sushi bar app🍣
