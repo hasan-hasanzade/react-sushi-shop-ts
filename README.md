@@ -25,4 +25,4 @@ Online sushi ordering app.
 
  👤 H&H
  
- :octocat: Github: [@hasan-hasanzade](https://github.com/hasan-hasanzade)
+ :octocat:: [@hasan-hasanzade](https://github.com/hasan-hasanzade)
