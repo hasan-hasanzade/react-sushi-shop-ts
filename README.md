@@ -23,6 +23,6 @@ Online sushi ordering app.
 
 # Author
 
- 👤 H&H
+ :copyright: H&H
  
  :octocat: [@hasan-hasanzade](https://github.com/hasan-hasanzade)
