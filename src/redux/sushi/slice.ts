@@ -1,8 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { SushiSliceState } from '../sushi/types';
-import {fetchSushi} from './asyncActions';
-
-
+import { fetchSushi } from './asyncActions';
 
 const initialState: SushiSliceState = {
   items: [],
