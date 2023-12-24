@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (max-width: 645px) {
+    @media (max-width: 992px) {
       flex-direction: column;
     }
     .header__cart {
@@ -26,6 +26,9 @@
     }
 
     h1 {
+      @media (max-width: 992px) {
+        margin-top: 5px;
+      }
       color: #e8e8e8;
       font-size: 24px;
       letter-spacing: 1%;
@@ -38,3 +41,4 @@
     }
   }
 }
+

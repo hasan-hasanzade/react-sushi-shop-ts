@@ -8,6 +8,7 @@ type Sushi = {
  
 export interface SushiSliceState {
    items: Sushi[];
+   singleItem: Sushi | null;
    status: 'loading' | 'success' | 'error';
   }
 
