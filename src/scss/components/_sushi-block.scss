@@ -1,6 +1,9 @@
 @import '../variables';
 
-.pizza-block {
+.sushi-block {
+  @media (max-width: 380px) {
+    width: 260px;
+  }
   width: 280px;
   text-align: center;
   margin-bottom: 65px;

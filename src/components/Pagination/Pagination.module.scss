@@ -1,10 +1,22 @@
 .root {
-   li {
-      display: inline-block;
+   @media (max-width: 992px) {
+      text-align: center;
    }
 
+   li {
+      display: inline-block;
+      &:not(:last-child) {
+         margin-right: 10px; /* Remove right margin for the last child */
+      }
+   }
 
    a {
+      @media (max-width: 992px) {
+         width: 40px;
+         height: 40px;
+         line-height: 38px;
+      }
+
       display: inline-block;
       text-align: center;
       width: 45px;
@@ -13,24 +25,24 @@
       color: #FFBE16;
       border: 2px solid #FFBE16;
       border-radius: 30px;
-      margin-right: 10px;
       cursor: pointer;
       transition: all .2s ease-in;
 
       &:hover {
          background-color: #FFBE16;
          color: #fff;
-      
       }
+      
    }
 
    :global {
       .selected {
+        
+
          a {
             background-color: #FFBE16;
             color: #fff;
          }
       }
-   } 
-
+   }
 }

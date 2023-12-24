@@ -1,7 +1,7 @@
 import React from 'react';
 import Categories from '../components/Categories';
 import Sort from '../components/Sort';
-import PizzaBlock from '../components/SushiBlock';
+import SushiBlock from '../components/SushiBlock';
 import Skeleton from '../components/SushiBlock/Skeleton';
 import Pagination from '../components/Pagination';
 import qs from 'qs';
@@ -58,7 +58,7 @@ const Home = () => {
     navigate(`?${queryString}`);
   }, [categoryId, sortType, currentPage, navigate]);
 
-  const pizzas = items.map((obj: any) => <PizzaBlock key={obj.id} {...obj} />);
+  const sushi = items.map((obj: any) => <SushiBlock key={obj.id} {...obj} />);
 
   const skeletons = [...new Array(4)].map((_, index) => <Skeleton key={index} />);
 
@@ -70,12 +70,32 @@ const Home = () => {
       </div>
       <h2 className="content__title">Menu</h2>
       {status === 'error' ? (
-        <div className="content_erro">
-          <h1>Proizawla owibka</h1>
-          <p>ne udalos polucit pizzi</p>
+        <div className="content__error">
+          <h4 className="content__heading">
+            Your search did not match any products. You may consider to:
+          </h4>
+          <ul className="content__list">
+            <li>Check the spelling</li>
+            <li>Use less keywords</li>
+            <li>Use different keywords</li>
+          </ul>
         </div>
       ) : (
-        <div className="content__items">{status === 'loading' ? skeletons : pizzas}</div>
+        <div className="content__items">
+          {status === 'loading' ? (
+            <div className="content__items">{skeletons}</div>
+          ) : (
+            <>
+              {sushi.length === 0 ? (
+                <div className="content__text">
+                  Nothing found. <br /> Please try again later
+                </div>
+              ) : (
+                <div className="content__items">{sushi}</div>
+              )}
+            </>
+          )}
+        </div>
       )}
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </div>
