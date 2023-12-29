@@ -16,7 +16,7 @@ export const fetchSushi = createAsyncThunk(
   },
 );
 
-export const fetchSingleSushi = createAsyncThunk('products/fetchSingleProduct', async (id: string) => {
+export const fetchSingleSushi = createAsyncThunk('sushi/fetchSingleProduct', async (id: string) => {
   const { data } = await axios.get(`https://641f2aa2ad55ae01ccb7d1f8.mockapi.io/items/${id}`);
   return data as CartItem;
 });
